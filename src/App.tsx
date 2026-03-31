@@ -11,6 +11,7 @@ import CartDrawer from "@/components/CartDrawer";
 import Index from "./pages/Index";
 import ShopPage from "./pages/ShopPage";
 import ProductPage from "./pages/ProductPage";
+import WishlistPage from "./pages/WishlistPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/shop" element={<ShopPage />} />
               <Route path="/shop/:category" element={<ShopPage />} />
               <Route path="/product/:id" element={<ProductPage />} />
+              <Route path="/wishlist" element={<WishlistPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
