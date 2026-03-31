@@ -20,6 +20,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const { openCart, totalItems } = useCart();
+  const { totalWishlistItems } = useWishlist();
 
   return (
     <>
