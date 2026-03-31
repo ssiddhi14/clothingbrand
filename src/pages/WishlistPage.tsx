@@ -9,7 +9,8 @@ const WishlistPage = () => {
   const { addItem } = useCart();
 
   const handleMoveToCart = (item: typeof wishlist[0]) => {
-    addItem({ id: item.id, name: item.name, price: item.price, image: item.image, size: "M", quantity: 1 });
+    const product = { id: item.id, name: item.name, price: item.price, image: item.image } as any;
+    addItem(product, "M", "Black");
     removeFromWishlist(item.id);
   };
 

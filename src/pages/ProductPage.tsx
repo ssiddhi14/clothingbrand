@@ -195,7 +195,7 @@ const ProductPage = () => {
                 Add to Bag
               </button>
               <button
-                onClick={() => toggleWishlist(product.id)}
+                onClick={() => toggleWishlist({ id: product.id, name: product.name, price: product.price, image: product.image })}
                 className={`w-14 border border-border flex items-center justify-center transition-colors ${wishlisted ? "bg-foreground text-background" : "hover:border-foreground"}`}
                 aria-label="Add to wishlist"
               >

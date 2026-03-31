@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, ShoppingBag, Heart, User, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import { useWishlist } from "@/context/WishlistContext";
 import SearchOverlay from "./SearchOverlay";
 
 const navLinks = [
