@@ -59,8 +59,13 @@ const Header = () => {
             <button onClick={() => setSearchOpen(true)} aria-label="Search" className="text-foreground/70 hover:text-foreground transition-colors">
               <Search size={20} />
             </button>
-            <Link to="/wishlist" className="hidden sm:block text-foreground/70 hover:text-foreground transition-colors">
+            <Link to="/wishlist" className="hidden sm:block relative text-foreground/70 hover:text-foreground transition-colors">
               <Heart size={20} />
+              {totalWishlistItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-foreground text-background text-[10px] font-body font-semibold w-5 h-5 flex items-center justify-center">
+                  {totalWishlistItems}
+                </span>
+              )}
             </Link>
             <Link to="/account" className="hidden sm:block text-foreground/70 hover:text-foreground transition-colors">
               <User size={20} />
