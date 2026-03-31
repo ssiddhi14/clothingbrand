@@ -77,7 +77,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </div>
         </Link>
         <button
-          onClick={() => toggleWishlist(product.id)}
+          onClick={() => toggleWishlist({ id: product.id, name: product.name, price: product.price, image: product.image })}
           className="mt-1 text-foreground/40 hover:text-foreground transition-colors"
           aria-label="Add to wishlist"
         >
